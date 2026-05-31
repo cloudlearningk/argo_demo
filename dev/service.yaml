@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: guestbook
+  namespace: demo-dev
+spec:
+  type: LoadBalancer
+  selector:
+    app: guestbook
+  ports:
+  - port: 80
+    targetPort: 80
